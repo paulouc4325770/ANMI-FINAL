@@ -115,10 +115,7 @@ for mensaje in st.session_state.historial:
 if not st.session_state.contexto["consentimiento"] and not st.session_state.contexto["fin_conversacion"]:
     st.write("---")
     # --- AGREGA ESTO AQUÍ ---
-    # Asegúrate de que la ruta 'views/terminos.py' sea correcta en tu carpeta
-    st.page_link("pages/terminos_condiciones.py", label="📄 Leer Términos y Condiciones", icon="⚖️")
-    st.write("") # Un pequeño espacio
-    # ------------------------
+
     col1, col2 = st.columns(2)
     if col1.button("✅ SÍ, ACEPTO", use_container_width=True):
         st.session_state.contexto["consentimiento"] = True
@@ -226,6 +223,7 @@ elif not st.session_state.contexto["fin_conversacion"]:
 
 else:
     st.error("La conversación ha terminado. Recarga la página (F5) para reiniciar.")
+
 
 
 
