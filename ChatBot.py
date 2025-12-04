@@ -16,8 +16,7 @@ st.set_page_config(page_title="ANMI - Chatbot", page_icon="🛡️")
 st.title("🛡️ ANMI: Lucha contra la Anemia")
 st.caption("Asistente Nutricional Materno Infantil (IA Supervisada)")
 
-# API KEY
-API_KEY = "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"
+
 
 # --- INICIALIZACIÓN DE ESTADO ---
 if "historial" not in st.session_state:
@@ -229,3 +228,4 @@ elif not st.session_state.contexto["fin_conversacion"]:
 else:
 
     st.error("La conversación ha terminado. Recarga la página (F5) para reiniciar.")
+
